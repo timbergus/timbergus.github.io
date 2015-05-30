@@ -5,7 +5,7 @@ module.exports = function () {
 
     gulp.task('connect', function () {
 		connect.server({
-    		root: 'dist',
+    		root: '.',
 			port: 5000
   		});
     });

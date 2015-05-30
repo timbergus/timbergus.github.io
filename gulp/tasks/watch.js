@@ -9,7 +9,7 @@ module.exports = function () {
 
         gulp.watch('./src/jsx/*.jsx', ['browserify'])
         	.on('change', livereload.changed);
-        gulp.watch('./src/scss/*.styl', ['stylus'])
+        gulp.watch('./src/stylus/*.styl', ['stylus'])
         	.on('change', livereload.changed);
         gulp.watch('./src/*.jade', ['templates'])
         	.on('change', livereload.changed);

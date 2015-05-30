@@ -5,7 +5,7 @@ module.exports = function () {
 
     gulp.task('stylus', function () {
 
-        return gulp.src('./src/scss/style.styl')
+        return gulp.src('./src/stylus/style.styl')
             .pipe(stylus({
       			compress: true
     		}))

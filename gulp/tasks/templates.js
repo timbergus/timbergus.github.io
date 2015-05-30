@@ -9,6 +9,6 @@ module.exports = function () {
             .pipe(jade({
                 pretty: true
             }))
-            .pipe(gulp.dest('./dist'))
+            .pipe(gulp.dest('./'))
     });
 };
