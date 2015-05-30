@@ -1,0 +1,44 @@
+{
+  "name": "timbergus",
+  "version": "0.0.1",
+  "description": "Timbergus site.",
+  "main": "index.html",
+  "dependencies": {
+    "d3": "^3.5.5",
+    "marked": "^0.3.3",
+    "react": "^0.13.2",
+    "react-router": "^0.13.3"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "browserify": "^9.0.8",
+    "gulp": "^3.8.11",
+    "gulp-connect": "^2.2.0",
+    "gulp-jade": "^1.0.0",
+    "gulp-jslint": "^0.2.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-stylus": "^2.0.2",
+    "reactify": "^1.1.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "react",
+    "gulp"
+  ],
+  "author": "timbergus@gmail.com",
+  "license": "MIT",
+  "private": true
+}

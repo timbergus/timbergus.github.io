@@ -1,0 +1,2 @@
+@charset "UTF-8";
+h1{text-align:center}.title{color:#ffaf05}.active{color:#00f;background-color:#9a7}.inline{display:inline-block}.navigation{display:flex;width:700px;margin:0 auto;padding:0;}.navigation li{flex:1;text-align:center;list-style-type:none;line-height:2em}.comment{background-color:#000;line-height:2em;padding:5px;margin:10px auto;width:200px;text-align:center;}.comment.box{color:#90ee90}.comment.list{color:#ff0}.comment.form{color:#fff}
