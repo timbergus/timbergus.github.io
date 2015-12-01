@@ -1,48 +1,38 @@
 {
   "name": "timbergus",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Timbergus site.",
-  "main": "index.html",
-  "dependencies": {
-    "history": "^1.13.1",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "react-router": "^1.0.0"
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha 'tests/index.js'",
+    "dev": "webpack-dev-server --content-base web/ --progress --color --inline --hot",
+    "prod": "mocha 'tests/index.js' && webpack"
   },
-  "browserify": {
-    "transform": [
-      [
-        "reactify",
-        {
-          "es6": true
-        }
-      ]
-    ]
-  },
+  "keywords": [
+    "webpack",
+    "react"
+  ],
+  "author": "Gustavo Muñoz <timbergus@gmail.com>",
+  "license": "MIT",
+  "private": true,
   "devDependencies": {
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
     "babel-preset-stage-2": "^6.1.18",
+    "chai": "^3.4.1",
     "css-loader": "^0.23.0",
     "jade": "^1.11.0",
     "jade-loader": "^0.8.0",
+    "mocha": "^2.3.4",
+    "react-addons-test-utils": "^0.14.3",
     "style-loader": "^0.13.0",
     "stylus-loader": "^1.4.2",
     "webpack": "^1.12.9"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "webpack-dev-server --content-base web/ --progress --color --inline --hot",
-    "prod": "webpack -d"
-  },
-  "keywords": [
-    "react",
-    "gulp"
-  ],
-  "author": "timbergus@gmail.com",
-  "license": "MIT",
-  "private": true
+  "dependencies": {
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
+  }
 }
