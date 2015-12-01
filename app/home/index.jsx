@@ -32,6 +32,9 @@ class Home extends React.Component {
                 <h1>Timbergus Site Under Construction!</h1>
                 <p>This is a {this.props.txt}</p>
                 <p>This is a {this.state.txt}</p>
+                <p>Counter: { this.props.count }</p>
+                <button onClick={ this.props.onIncrement }>+</button>
+                <button onClick={ this.props.onDecrement }>-</button>
             </div>
         );
     }
