@@ -4,9 +4,9 @@
   "description": "Timbergus site.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha 'tests/index.js'",
+    "test": "mocha tests/index.js",
     "dev": "webpack-dev-server --content-base web/ --progress --color --inline --hot",
-    "prod": "webpack"
+    "prod": "mocha tests/index.js && webpack"
   },
   "keywords": [
     "webpack",
