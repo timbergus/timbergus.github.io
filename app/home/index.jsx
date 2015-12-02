@@ -2,9 +2,9 @@ import React from 'react';
 
 class Home extends React.Component {
 
-    constructor (props) {
+    constructor (props, context) {
 
-        super(props);
+        super(props, context);
 
         this.state = {
             txt: 'state message...'
@@ -32,9 +32,9 @@ class Home extends React.Component {
                 <h1>Timbergus Site Under Construction!</h1>
                 <p>This is a {this.props.txt}</p>
                 <p>This is a {this.state.txt}</p>
-                <p>Counter: { this.props.count }</p>
-                <button onClick={ this.props.onIncrement }>+</button>
-                <button onClick={ this.props.onDecrement }>-</button>
+                <p>Counter: { this.props.counter }</p>
+                <button onClick={ this.props.incrementCounter }>+</button>
+                <button onClick={ this.props.decrementCounter }>-</button>
             </div>
         );
     }
