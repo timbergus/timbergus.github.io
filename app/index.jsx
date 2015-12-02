@@ -7,8 +7,8 @@ import { createStore, applyMiddleware, compose, bindActionCreators } from 'redux
 import thunk from 'redux-thunk';
 import { devTools, persistState } from 'redux-devtools';
 import { DevTools, DebugPanel, LogMonitor } from 'redux-devtools/lib/react';
-import reducers from './store/reducers/index';
-import { incrementCounter, decrementCounter } from './store/reducers/counter';
+import reducers from './store/index';
+import { incrementCounter, decrementCounter } from './store/counter';
 
 let middleware = [thunk];
 
