@@ -1,3 +1,9 @@
 /.idea/
+/coverage/
+/.nyc_output/
 /node_modules/
+/web/bundle.js.map
+/web/bundle.js
+/src/api/samples/*-*.json
+*.log
 *.DS_Store
