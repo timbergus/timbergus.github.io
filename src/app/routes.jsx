@@ -1,4 +1,4 @@
-import { React, Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
@@ -6,7 +6,7 @@ import { incrementCounter, decrementCounter } from './store/counter';
 
 import Home from './home/index.jsx';
 
-class HomeWrapper extends Component {
+class HomeWrapper extends React.Component {
     
     render () {
         return (<Home txt="This is working just fine :)" />);
