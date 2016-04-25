@@ -33,7 +33,7 @@ export default class Home extends React.Component {
   render () {
     return (
       <div>
-        <h1>Timbergus Site Under Construction!</h1>
+        <div className='big-title'>Timbergus Site Under Construction!</div>
         <p>This is a {this.props.txt}</p>
         <p>This is a {this.state.txt}</p>
         <p>Counter: { this.props.counter }</p>

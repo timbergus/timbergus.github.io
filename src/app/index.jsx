@@ -1,26 +1,22 @@
-"use strict";
+'use strict'
 
-import style from "./styles/style.styl";
+import './styles/reset.styl'
+import './styles/style.styl'
 
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import { Provider } from "react-redux";
-//import { DevTools, DebugPanel, LogMonitor } from "redux-devtools/lib";
+import { Provider } from 'react-redux'
 
-import store from "./store";
+import store from './store'
 
-import Routes from "./routes.jsx";
-import Home from "./home/index.jsx";
+import Routes from './routes.jsx'
 
 ReactDOM.render(
-    <div>
-        <Provider store={ store }>
-            <Routes />
-        </Provider>
-        {/* <DebugPanel top right bottom> */}
-            {/* <DevTools store={ store } monitor={ LogMonitor } /> */}
-        {/* </DebugPanel> */}
-    </div>,
-    document.getElementById("body")
-);
+  <div>
+    <Provider store={ store }>
+      <Routes />
+    </Provider>
+  </div>,
+  document.getElementById('body')
+)
