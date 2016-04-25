@@ -24,7 +24,9 @@ const NewHome = connect(mapStateToProps, mapDispatchToProps)(Home)
 class HomeWrapper extends React.Component {
 
   render () {
-    return (<NewHome txt='This is working just fine :)' />)
+    return (
+      <NewHome txt='This is working just fine :)' />
+    )
   }
 };
 
