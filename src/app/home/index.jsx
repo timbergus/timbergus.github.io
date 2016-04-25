@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 
 export default class Home extends React.Component {
 
@@ -7,7 +8,7 @@ export default class Home extends React.Component {
   }
 
   static defaultProps = {
-    txt: 'props message...'
+    txt: 'This is a props message...'
   }
 
   constructor (props, context) {
@@ -33,9 +34,9 @@ export default class Home extends React.Component {
   render () {
     return (
       <div>
-        <div className='big-title'>Timbergus Site Under Construction!</div>
-        <p>This is a {this.props.txt}</p>
-        <p>This is a {this.state.txt}</p>
+        <div className={ classNames({ 'big-title': true }) }>Timbergus Site Under Construction!</div>
+        <p>{ this.props.txt }</p>
+        <p className={ classNames({ visible: this.props.counter === 5 }) }>This is a { this.state.txt }</p>
         <p>Counter: { this.props.counter }</p>
         <button onClick={ this.props.incrementCounter }>+</button>
         <button onClick={ this.props.decrementCounter }>-</button>
