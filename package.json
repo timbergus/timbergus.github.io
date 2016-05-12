@@ -6,7 +6,7 @@
   "scripts": {
     "coverage": "nyc --reporter=lcov npm test | tap-spec",
     "test": "node test.js",
-    "dev": "webpack-dev-server",
+    "start": "webpack-dev-server",
     "prod": "npm test && webpack -p -d"
   },
   "keywords": [
