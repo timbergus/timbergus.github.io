@@ -1,7 +1,7 @@
 var path = require("path");
 
 module.exports = {
-  entry: path.join(__dirname, "src", "app", "index.jsx"),
+  entry: path.join(__dirname, "src", "app", "main.ts"),
   output: {
     path: path.join(__dirname, "web"),
     publicPath: "/web",
@@ -22,10 +22,32 @@ module.exports = {
         loader: "style!css!stylus"
       },
       {
-        test: /\.js?$|\.jsx?$/,
+        test: /\.css$/,
         exclude: /node_modules/,
-        loader: "babel"
+        loader: "style!css" },
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        loader: "ts-loader"
+      },
+      {
+        test: /\.html$/,
+        exclude: /node_modules/,
+        loader: "html"
+      },
+      {
+        test: /\.jpg$/,
+        exclude: /node_modules/,
+        loader: "file-loader"
+      },
+      {
+        test: /\.png$/,
+        exclude: /node_modules/,
+        loader: "url-loader?mimetype=image/png"
       }
-    ]
+    ],
+    htmlLoader: {
+      ignoreCustomFragments: [/\{\{.*?}}/]
+    }
   }
 }

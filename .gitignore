@@ -1,7 +1,4 @@
-/.idea/
-/coverage/
-/.nyc_output/
 /node_modules/
-/src/api/samples/*-*.json
+/typings/
 *.log
 *.DS_Store
