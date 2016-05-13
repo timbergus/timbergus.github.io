@@ -3,6 +3,7 @@ import { Router, RouteConfig, ROUTER_DIRECTIVES } from "@angular/router-deprecat
 
 import { LoginComponent } from "./components/login-component.ts";
 import { HomeComponent } from "./components/home-component.ts";
+import { EducationComponent } from "./components/education-component.ts";
 import { AboutComponent } from "./components/about-component.ts";
 import { ContactComponent } from "./components/contact-component.ts";
 
@@ -21,6 +22,11 @@ import { ContactComponent } from "./components/contact-component.ts";
     path: "/home",
     name: "Home",
     component: HomeComponent
+  },
+  {
+    path: "/education/...",
+    name: "Education",
+    component: EducationComponent
   },
   {
     path: "/about/:param",
@@ -53,6 +59,10 @@ import { ContactComponent } from "./components/contact-component.ts";
         [routerLink]="['/Home']"
         [class.active]="isRouteActive(['/Home'])"
         class="item">Home</a>
+      <a
+        [routerLink]="['/Education']"
+        [class.active]="isRouteActive(['/Education'])"
+        class="item">Education</a>
       <a
         [routerLink]="['/About', { param: param }]"
         [class.active]="isRouteActive(['/About', { param: param }])"
