@@ -1,4 +1,5 @@
 /// <reference path="./main.d.ts"/>
+/// <reference path="../../typings/browser.d.ts"/>
 
 import "es6-shim";
 import "zone.js/dist/zone";
