@@ -8,8 +8,6 @@ import { EducationComponent } from "./components/education-component.ts";
 import { AboutComponent } from "./components/about-component.ts";
 import { ContactComponent } from "./components/contact-component.ts";
 
-let template = require("./home.html");
-
 // Here we have the routing definition.
 @RouteConfig([
   { path: "/",              name: "root",      redirectTo: ["/Login"] },
@@ -24,7 +22,7 @@ let template = require("./home.html");
 // And the home component that contains the application.
 @Component({
   selector: "home",
-  template: `${ template }`,
+  templateUrl: "src/app/home.html",
   directives: [ROUTER_DIRECTIVES]
 })
 
