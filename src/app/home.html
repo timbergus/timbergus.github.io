@@ -1,0 +1,26 @@
+<h1>Gustavo Muñoz Site</h1>
+
+<div class="ui pointing menu" >
+  <a
+    [routerLink]="['/Login']"
+    [class.active]="isRouteActive(['/Login'])"
+    class="item">Login</a>
+  <a
+    [routerLink]="['/Home']"
+    [class.active]="isRouteActive(['/Home'])"
+    class="item">Home</a>
+  <a
+    [routerLink]="['/Education']"
+    [class.active]="isRouteActive(['/Education'])"
+    class="item">Education</a>
+  <a
+    [routerLink]="['/About', { param: param }]"
+    [class.active]="isRouteActive(['/About', { param: param }])"
+    class="item">About</a>
+  <a
+    [routerLink]="['/Contact']"
+    [class.active]="isRouteActive(['/Contact'])"
+    class="item">Contact</a>
+</div>
+
+<router-outlet></router-outlet>
