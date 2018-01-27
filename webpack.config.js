@@ -41,7 +41,8 @@ module.exports = () => ({
     new webpack.optimize.UglifyJsPlugin(),
     new ExtractTextPlugin('styles.[chunkhash].css'),
     new HtmlWebpackPlugin({
-      template: resolve('src', 'index.html')
+      template: resolve('src', 'index.html'),
+      filename: resolve('index.html')
     })
   ],
   resolve: {
