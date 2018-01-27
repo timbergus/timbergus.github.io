@@ -14,6 +14,7 @@ module.exports = () => ({
   },
   devServer: {
     contentBase: resolve('src', 'images'),
+    compress: true,
     host: '0.0.0.0',
     port: 3000
   },
@@ -40,6 +41,9 @@ module.exports = () => ({
   plugins: [
     new webpack.optimize.UglifyJsPlugin(),
     new ExtractTextPlugin('styles.[chunkhash].css'),
+    new HtmlWebpackPlugin({
+      template: resolve('src', 'index.html')
+    }),
     new HtmlWebpackPlugin({
       template: resolve('src', 'index.html'),
       filename: resolve('index.html')

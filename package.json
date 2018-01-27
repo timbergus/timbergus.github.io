@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --env.dev",
+    "start": "webpack-dev-server . --env.dev",
     "build": "webpack -p --env.prod",
     "build:output": "webpack -p --env.prod --profile --json >> stats.json",
     "docs": "esdoc -c esdoc.json",
