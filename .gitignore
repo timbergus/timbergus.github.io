@@ -1,4 +1,8 @@
 /node_modules/
-/typings/
-*.log
+/coverage/
+/docs/
+/dist/
+stats.json
 *.DS_Store
+*.log
+*.xml

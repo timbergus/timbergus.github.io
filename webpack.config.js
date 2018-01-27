@@ -1,53 +1,53 @@
-var path = require("path");
+const webpack = require('webpack');
+const { resolve } = require('path');
 
-module.exports = {
-  entry: path.join(__dirname, "src", "app", "app.ts"),
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+module.exports = () => ({
+  entry: {
+    app: resolve('src', 'index.jsx')
+  },
   output: {
-    path: path.join(__dirname, "dist"),
-    publicPath: "/dist",
-    filename: "bundle.js"
+    path: resolve('dist'),
+    filename: '[name].[chunkhash].js'
   },
   devServer: {
-    inline: true,
-    progress: true,
-    color: true,
-    contentBase: __dirname,
-    port: 3333
+    contentBase: resolve('src', 'images'),
+    host: '0.0.0.0',
+    port: 3000
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.styl$/,
-        exclude: /node_modules/,
-        loader: "style!css!stylus"
+        test : /\.jsx?$/,
+        exclude : /node_modules/,
+        use : 'babel-loader'
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        loader: "style!css" },
-      {
-        test: /\.ts$/,
-        exclude: /node_modules/,
-        loader: "ts-loader"
-      },
-      {
-        test: /\.html$/,
-        exclude: /node_modules/,
-        loader: "html"
-      },
-      {
-        test: /\.jpg$/,
-        exclude: /node_modules/,
-        loader: "file-loader"
-      },
-      {
-        test: /\.png$/,
-        exclude: /node_modules/,
-        loader: "url-loader?mimetype=image/png"
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader',
+            'postcss-loader'
+          ]
+        })
       }
-    ],
-    htmlLoader: {
-      ignoreCustomFragments: [/\{\{.*?}}/]
+    ]
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin(),
+    new ExtractTextPlugin('styles.[chunkhash].css'),
+    new HtmlWebpackPlugin({
+      template: resolve('src', 'index.html')
+    })
+  ],
+  resolve: {
+    extensions: ['.js', '.jsx', '.css'],
+    alias: {
+      components: resolve('src', 'app')
     }
   }
-}
+});
