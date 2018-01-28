@@ -1,0 +1,13 @@
+.proverb {
+  width: 900px;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  background-color: cornsilk;
+  background-image: url('../../../images/star.png');
+  padding: 20px 0;
+
+  h1 {
+    color: cadetblue;
+  }
+}
