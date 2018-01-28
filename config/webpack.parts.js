@@ -11,26 +11,10 @@ module.exports.entry = app => ({
   entry: { app }
 });
 
-module.exports.outputDev = path => {
+module.exports.output = path => {
 
   const plugin = new HtmlWebpackPlugin({
     template: resolve('src', 'index.html')
-  });
-
-  return {
-    output: {
-      path,
-      filename: '[name].[chunkhash].js'
-    },
-    plugins: [plugin]
-  };
-};
-
-module.exports.outputProd = path => {
-
-  const plugin = new HtmlWebpackPlugin({
-    template: resolve('src', 'index.html'),
-    filename: resolve('index.html')
   });
 
   return {
@@ -111,12 +95,12 @@ module.exports.loadImages = ({ include, exclude, options } = {}) => ({
       include,
       exclude,
       use: [
-        /* {
+        {
           loader: 'image-trace-loader',
           options: {
             color: '#cacaca'
           }
-        }, */
+        },
         {
           loader: 'url-loader',
           options

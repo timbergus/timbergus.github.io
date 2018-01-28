@@ -4,8 +4,7 @@ const { resolve } = require('path');
 
 const {
   entry,
-  outputDev,
-  outputProd,
+  output,
   devServer,
   loadJSX,
   loadCSS,
@@ -21,8 +20,7 @@ const {
 module.exports = env => {
   return merge([
     entry(resolve('src', 'app', 'index.jsx')),
-    env.dev && outputDev(resolve('dist')),
-    env.prod && outputProd(resolve('dist')),
+    output(resolve('dist')),
     env.dev && devServer({
       host: '0.0.0.0',
       port: 3000
