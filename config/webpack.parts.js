@@ -104,20 +104,24 @@ module.exports.extractCSS = ({ include, exclude, use } = {}) => {
   };
 };
 
-module.exports.loadPNG = ({ include, exclude } = {}) => ({
+module.exports.loadImages = ({ include, exclude, options } = {}) => ({
   module: {
     rules: [{
-      test: /\.png$/,
+      test: /\.(jpg|png|svg)$/,
       include,
       exclude,
-      use: {
-        loader: 'url-loader',
-        options: {
-          query: {
-            mimetype: 'image/png'
+      use: [
+        {
+          loader: 'image-trace-loader',
+          options: {
+            color: '#cacaca'
           }
+        },
+        {
+          loader: 'url-loader',
+          options
         }
-      }
+      ]
     }]
   }
 });
@@ -154,6 +158,7 @@ module.exports.extensions = () => ({
 module.exports.alias = () => ({
   resolve: {
     alias: {
+      images: resolve('src', 'images'),
       components: resolve('src', 'app', 'components')
     }
   }

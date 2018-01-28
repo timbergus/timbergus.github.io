@@ -4,10 +4,29 @@
   margin: 0 auto;
   text-align: center;
   background-color: cornsilk;
-  background-image: url('../../../images/star.png');
+  background-image: url('~images/star.png');
   padding: 20px 0;
 
   h1 {
     color: cadetblue;
+  }
+}
+
+.image-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .hidden {
+    opacity: 0;
+    transition: 0.5s;
   }
 }

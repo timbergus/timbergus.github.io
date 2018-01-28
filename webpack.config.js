@@ -10,7 +10,7 @@ const {
   loadJSX,
   loadCSS,
   extractCSS,
-  loadPNG,
+  loadImages,
   notify,
   uglifyJS,
   purifyCSS,
@@ -43,9 +43,13 @@ module.exports = env => {
         'postcss-loader'
       ]
     }),
-    loadPNG({
+    loadImages({
       include: resolve('src'),
-      exclude: /node_modules/
+      exclude: /node_modules/,
+      options: {
+        limit: 25000,
+        name: '[name].[hash].[ext]'
+      }
     }),
     notify(),
     uglifyJS(),
