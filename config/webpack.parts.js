@@ -114,7 +114,8 @@ module.exports.loadImages = ({ include, exclude, options } = {}) => ({
         {
           loader: 'image-trace-loader',
           options: {
-            color: '#cacaca'
+            color: '#cacaca',
+            skipTraceIfBase64: true
           }
         },
         {
