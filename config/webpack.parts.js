@@ -111,12 +111,12 @@ module.exports.loadImages = ({ include, exclude, options } = {}) => ({
       include,
       exclude,
       use: [
-        {
+        /* {
           loader: 'image-trace-loader',
           options: {
             color: '#cacaca'
           }
-        },
+        }, */
         {
           loader: 'url-loader',
           options
