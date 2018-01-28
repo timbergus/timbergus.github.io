@@ -1,0 +1,33 @@
+.proverb {
+  width: 900px;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff8dc;
+  background-image: url(star.97796e46b516c7618ca47fda12e48118.png);
+  padding: 20px 0;
+}
+
+.proverb h1 {
+  color: #5f9ea0;
+}
+
+.image-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.image-container .hidden {
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
