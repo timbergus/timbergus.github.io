@@ -3617,7 +3617,7 @@ ignore@^3.3.3, ignore@^3.3.5:
   version "3.3.7"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.7.tgz#612289bfb3c220e186a58118618d5be8c1bab021"
 
-image-trace-loader@^0.0.2:
+image-trace-loader@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/image-trace-loader/-/image-trace-loader-0.0.2.tgz#1e6075e96c70ddcf8dc9e31a33e44d61d25b220a"
   dependencies:
@@ -7892,6 +7892,10 @@ warning@^3.0.0:
   resolved "https://registry.yarnpkg.com/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
   dependencies:
     loose-envify "^1.0.0"
+
+wasm-loader@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/wasm-loader/-/wasm-loader-1.1.0.tgz#33d07f7cd1b45854170cf1216880de783725a589"
 
 watch@~0.18.0:
   version "0.18.0"

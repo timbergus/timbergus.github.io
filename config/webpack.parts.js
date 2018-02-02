@@ -110,6 +110,15 @@ module.exports.loadImages = ({ include, exclude, options } = {}) => ({
   }
 });
 
+module.exports.loadWASM = () => ({
+  module: {
+    rules: [{
+      test: /\.wasm$/,
+      use: ['wasm-loader']
+    }]
+  }
+});
+
 module.exports.notify = () => ({
   plugins: [
     new SystemBellPlugin(),

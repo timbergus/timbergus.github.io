@@ -10,6 +10,7 @@ const {
   loadCSS,
   extractCSS,
   loadImages,
+  loadWASM,
   notify,
   uglifyJS,
   purifyCSS,
@@ -49,8 +50,9 @@ module.exports = env => {
         name: '[name].[hash].[ext]'
       }
     }),
+    loadWASM(),
     notify(),
-    uglifyJS(),
+    // uglifyJS(),
     purifyCSS(glob.sync(resolve('src', 'app', '**', '*'), {
       nodir: true
     })),

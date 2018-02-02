@@ -1,14 +1,13 @@
-.proverb {
+main {
   width: 900px;
   height: 100vh;
   margin: 0 auto;
   text-align: center;
   background-color: #fff8dc;
-  background-image: url([object Object]);
   padding: 20px 0;
 }
 
-.proverb h1 {
+main h1 {
   color: #5f9ea0;
 }
 
@@ -16,7 +15,7 @@
   position: relative;
   width: 100px;
   height: 100px;
-  margin: 0 auto;
+  margin: 20px auto 0;
 }
 
 .image-container img {
