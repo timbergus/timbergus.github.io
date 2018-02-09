@@ -12,7 +12,7 @@ const {
   loadImages,
   loadWASM,
   notify,
-  uglifyJS,
+  //uglifyJS,
   purifyCSS,
   extensions,
   alias

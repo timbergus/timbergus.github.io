@@ -9,6 +9,9 @@ import { getRandom, arr, add } from '../../utils/math';
 
 import './app.css';
 
+import { TestSubject } from '../test-subject/test-subject';
+import { ResponsiveTester } from '../responsive-tester/responsive-tester';
+
 export class App extends Component {
 
   constructor(props) {
@@ -47,6 +50,13 @@ export class App extends Component {
           <img src={meme.trace} alt="meme" />
           <img src={meme.src} alt="meme" className="hidden" onLoad={this.handleLoad} />
         </div>
+        <TestSubject />
+        <ResponsiveTester minWidth={200}>
+          <TestSubject />
+        </ResponsiveTester>
+        <ResponsiveTester minWidth={100}>
+          <TestSubject />
+        </ResponsiveTester>
       </main>
     );
   }

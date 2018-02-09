@@ -1,0 +1,13 @@
+.test-subject {
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.item {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+}
