@@ -12,7 +12,7 @@ const {
   loadImages,
   loadWASM,
   notify,
-  //uglifyJS,
+  uglifyJS,
   purifyCSS,
   extensions,
   alias
@@ -52,7 +52,7 @@ module.exports = env => {
     }),
     loadWASM(),
     notify(),
-    // uglifyJS(),
+    uglifyJS(),
     purifyCSS(glob.sync(resolve('src', 'app', '**', '*'), {
       nodir: true
     })),

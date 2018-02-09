@@ -31,7 +31,7 @@ export class ResponsiveTester extends Component {
 
   handleMousedown(event) {
     if (event.offsetX >= this.rc.clientWidth) {
-      this.origin = this.rect.left + this.rc.clientWidth + this.handleWidth / 2.0;
+      this.origin = this.rc.clientWidth + this.handleWidth / 2.0;
       this.fetched = true;
     }
   }
@@ -53,12 +53,12 @@ export class ResponsiveTester extends Component {
     }
     if (this.fetched) {
       if (event.offsetX >= this.props.minWidth - this.handleWidth / 2.0) {
-        this.diff = event.clientX - this.origin;
-        this.origin = event.screenX;
+        this.diff = event.offsetX - this.origin;
         this.rc.style.width = `${Math.max(this.props.minWidth, this.rc.offsetWidth + this.diff)}px`;
+        this.origin = event.offsetX;
       } else {
         this.rc.style.width = `${this.props.minWidth}px`;
-        this.origin = this.rect.left + this.props.minWidth - this.handleWidth / 2.0;
+        this.origin = this.props.minWidth - this.handleWidth / 2.0;
       }
     }
   }
