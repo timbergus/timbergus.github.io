@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const SystemBellPlugin = require('system-bell-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports.entry = app => ({
   entry: { app }
@@ -128,17 +127,6 @@ module.exports.notify = () => ({
   ]
 });
 
-module.exports.uglifyJS = () => {
-  const plugin = new UglifyJSPlugin({
-    uglifyOptions: {
-      ecma: 8
-    }
-  });
-  return {
-    plugins: [plugin]
-  };
-};
-
 module.exports.purifyCSS = paths => {
   const plugin = new PurifyCSSPlugin({ paths });
   return {
@@ -156,7 +144,8 @@ module.exports.alias = () => ({
   resolve: {
     alias: {
       images: resolve('src', 'images'),
-      components: resolve('src', 'app', 'components')
+      components: resolve('src', 'app', 'components'),
+      utils: resolve('src', 'app', 'utils')
     }
   }
 });
