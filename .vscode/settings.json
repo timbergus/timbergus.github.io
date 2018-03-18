@@ -3,6 +3,7 @@
         "chunkhash",
         "nodir",
         "purifycss",
-        "wasm"
+        "wasm",
+        "webassembly"
     ]
 }

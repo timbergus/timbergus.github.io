@@ -5,7 +5,7 @@ import meme from 'images/meme.png';
 
 import config from './app.json';
 
-import { getRandom, arr, add } from '../../utils/math';
+import { getRandom, add } from '../../utils/math';
 
 import './app.css';
 
@@ -17,7 +17,6 @@ export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      visibleOrigianl: false,
       result: 0
     };
   }
@@ -31,8 +30,6 @@ export class App extends Component {
       this.image.style.width = `${Math.max(result, 100)}px`;
       this.setState({ result });
     });
-
-    arr([1, 2, 3, 4, 5]).then(result => console.log(result));
   }
 
   render() {

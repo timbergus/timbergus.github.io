@@ -112,8 +112,10 @@ module.exports.loadImages = ({ include, exclude, options } = {}) => ({
 module.exports.loadWASM = () => ({
   module: {
     rules: [{
+      // test: /\.wasm$/,
+      // use: ['wasm-loader']
       test: /\.wasm$/,
-      use: ['wasm-loader']
+      type: 'webassembly/experimental'
     }]
   }
 });
