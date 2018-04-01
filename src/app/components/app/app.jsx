@@ -5,7 +5,7 @@ import meme from 'images/meme.png';
 
 import config from './app.json';
 
-import { getRandom, add } from '../../utils/math';
+import { getRandom, add } from '../../utils/simple-math';
 
 import './app.css';
 
