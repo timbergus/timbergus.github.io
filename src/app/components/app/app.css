@@ -29,3 +29,7 @@ main {
     transition: 0.5s;
   }
 }
+
+.wide {
+  width: 100%;
+}

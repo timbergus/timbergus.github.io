@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Icon, Label } from 'semantic-ui-react';
 
 import meme from 'images/meme.png';
+import earth from 'images/earth.jpg';
 
 import config from './app.json';
 
@@ -17,7 +18,7 @@ export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      result: 0
+      result: 0,
     };
   }
 
@@ -51,9 +52,10 @@ export class App extends Component {
         <ResponsiveTester minWidth={200}>
           <TestSubject />
         </ResponsiveTester>
-        <ResponsiveTester minWidth={100}>
-          <TestSubject />
-        </ResponsiveTester>
+        <div className="image-container wide">
+          <img src={earth.trace} alt="earth" />
+          <img src={earth.src} alt="earth" className="hidden" onLoad={this.handleLoad} />
+        </div>
       </main>
     );
   }
