@@ -4,7 +4,7 @@ const PurifyCSSPlugin = require('purifycss-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const SystemBellPlugin = require('system-bell-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports.entry = app => ({
   entry: { app }
@@ -66,8 +66,7 @@ module.exports.loadCSS = ({ include, exclude } = {}) => ({
 
 module.exports.extractCSS = ({ include, exclude, use } = {}) => {
 
-  const plugin = new ExtractTextPlugin({
-    allChunks: true,
+  const plugin = new MiniCssExtractPlugin({
     filename: '[name].[chunkhash].css'
   });
 
@@ -77,10 +76,10 @@ module.exports.extractCSS = ({ include, exclude, use } = {}) => {
         test: /\.css$/,
         include,
         exclude,
-        use: plugin.extract({
-          use,
-          fallback: 'style-loader'
-        })
+        use: [
+          MiniCssExtractPlugin.loader,
+          ...use
+        ]
       }]
     },
     plugins: [plugin]
