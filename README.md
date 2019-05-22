@@ -2,6 +2,8 @@
 
 This is a [React](https://facebook.github.io/react/) template for a quick start with React and [Redux](https://github.com/reactjs/redux).
 
+> [https://gist.github.com/cobyism/4730490](https://gist.github.com/cobyism/4730490)
+
 ## Template Structure
 
 The file structure is as follow:
