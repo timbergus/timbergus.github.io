@@ -13,7 +13,9 @@ module.exports.entry = app => ({
 module.exports.output = path => {
 
   const plugin = new HtmlWebpackPlugin({
-    template: resolve('src', 'index.html')
+    template: resolve('src', 'index.html'),
+    filename: resolve('index.html'),
+    favicon: resolve('src', 'images', 'favicon.png'),
   });
 
   return {

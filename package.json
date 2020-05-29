@@ -10,7 +10,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --env.dev",
     "start:dev": "nodemon --watch webpack.config.js --watch config/webpack.parts.js --exec \"webpack-dev-server --env.dev\"",
-    "build": "rimraf dist && webpack --mode production --env.prod",
+    "build": "rimraf dist && rimraf index.html && webpack --mode production --env.prod",
     "deploy": "gh-pages -d dist",
     "build:output": "rimraf dist && webpack -p --env.prod --profile --json >> stats.json",
     "docs": "esdoc -c esdoc.json",
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "classnames": "2.2.6",
-    "gh-pages": "^2.2.0",
+    "gh-pages": "^3.0.0",
     "moment": "2.26.0",
     "numeral": "2.0.6",
     "prop-types": "15.7.2",
