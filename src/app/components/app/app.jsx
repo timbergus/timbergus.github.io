@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Button, Icon, Label } from 'semantic-ui-react';
 
-import meme from 'images/meme.png';
-import earth from 'images/earth.jpg';
+import meme from '../../../images/meme.png';
+import earth from '../../../images/earth.jpg';
 
 import config from './app.json';
 
@@ -34,7 +34,7 @@ export class App extends Component {
   }
 
   render() {
-    return(
+    return (
       <main>
         <h1>{config.proverb}</h1>
         <Button as='div' labelPosition='right' onClick={this.handleClick.bind(this)}>

@@ -21,7 +21,8 @@ module.exports.output = path => {
   return {
     output: {
       path,
-      filename: '[name].[chunkhash].js'
+      filename: '[name].[chunkhash].js',
+      publicPath: resolve('dist'),
     },
     plugins: [plugin]
   };
