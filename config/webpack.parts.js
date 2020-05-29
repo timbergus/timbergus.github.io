@@ -14,7 +14,6 @@ module.exports.output = path => {
 
   const plugin = new HtmlWebpackPlugin({
     template: resolve('src', 'index.html'),
-    filename: resolve('index.html'),
     favicon: resolve('src', 'images', 'favicon.png'),
   });
 
@@ -22,7 +21,6 @@ module.exports.output = path => {
     output: {
       path,
       filename: '[name].[chunkhash].js',
-      publicPath: resolve('dist'),
     },
     plugins: [plugin]
   };
