@@ -10,13 +10,13 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --env.dev",
     "start:dev": "nodemon --watch webpack.config.js --watch config/webpack.parts.js --exec \"webpack-dev-server --env.dev\"",
-    "build": "webpack --mode production --env.prod",
+    "build": "rimraf dist && webpack --mode production --env.prod",
     "deploy": "gh-pages -b master -d build",
-    "build:output": "webpack -p --env.prod --profile --json >> stats.json",
+    "build:output": "rimraf dist && webpack -p --env.prod --profile --json >> stats.json",
     "docs": "esdoc -c esdoc.json",
     "lint": "eslint -c .eslintrc.js -f checkstyle src/app/**/* > checkstyle.xml",
     "test": "jest --no-cache && echo \"All DONE!!\"",
-    "postinstall": "npm i -D babel-jest \"babel-core@^7.0.0-0\""
+    "panic": "rimraf package-lock.json && rimraf node_modules && npm i"
   },
   "dependencies": {
     "classnames": "2.2.6",
@@ -30,18 +30,18 @@
     "react-router-dom": "5.2.0",
     "redux": "4.0.5",
     "redux-thunk": "2.3.0",
+    "rimraf": "3.0.2",
     "semantic-ui-react": "0.88.2",
     "superagent": "5.2.2"
   },
   "devDependencies": {
     "@babel/core": "7.10.1",
-    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-proposal-class-properties": "7.10.1",
     "@babel/plugin-proposal-optional-chaining": "7.10.1",
     "@babel/preset-env": "7.10.1",
     "@babel/preset-react": "7.10.1",
-    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "10.1.0",
-    "babel-jest": "^26.0.1",
+    "babel-jest": "26.0.1",
     "babel-loader": "8.1.0",
     "caniuse-lite": "1.0.30001066",
     "clean-webpack-plugin": "3.0.0",
