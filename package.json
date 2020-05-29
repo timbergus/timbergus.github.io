@@ -11,7 +11,7 @@
     "start": "webpack-dev-server --mode development --env.dev",
     "start:dev": "nodemon --watch webpack.config.js --watch config/webpack.parts.js --exec \"webpack-dev-server --env.dev\"",
     "build": "rimraf dist && webpack --mode production --env.prod",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d dist",
     "build:output": "rimraf dist && webpack -p --env.prod --profile --json >> stats.json",
     "docs": "esdoc -c esdoc.json",
     "lint": "eslint -c .eslintrc.js -f checkstyle src/app/**/* > checkstyle.xml",
