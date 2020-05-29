@@ -1,5 +1,5 @@
 const glob = require('glob');
-const merge = require ('webpack-merge');
+const merge = require('webpack-merge');
 const { resolve } = require('path');
 
 const {
@@ -15,14 +15,14 @@ const {
   purifyCSS,
   extensions,
   alias
-} = require ('./config/webpack.parts');
+} = require('./config/webpack.parts');
 
 module.exports = env => {
   return merge([
     entry(resolve('src', 'app', 'index.jsx')),
     output(resolve('dist')),
     env.dev && devServer({
-      host: '0.0.0.0',
+      host: 'localhost',
       port: 3000
     }),
     loadJSX({
