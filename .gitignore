@@ -1,1 +1,8 @@
-node_modules
+/node_modules/
+/dist/
+/__tests__/coverage/
+/docs/
+stats.json
+*.DS_Store
+*.log
+*.xml

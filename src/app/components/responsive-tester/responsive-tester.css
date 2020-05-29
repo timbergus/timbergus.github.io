@@ -1,0 +1,28 @@
+:root {
+  --position: 0;
+  --br-width: 20px;
+}
+
+.resizable-container {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 1px solid #77DD77;
+  border-right-width: var(--br-width);
+  background-color: black;
+  margin-left: var(--position);
+  user-select: none;
+  border-radius: 10px;
+}
+
+.arrow {
+  position: absolute;
+  width: var(--br-width);
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  top: 50%;
+  right: calc(-1 * var(--br-width));
+  transform: translate(0, -50%);
+  pointer-events: none;
+}
